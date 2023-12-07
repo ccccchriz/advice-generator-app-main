@@ -70,7 +70,7 @@ h6 {
 
 :root {
   --clr-primary-cyan: hsl(193, 38%, 86%);
-  --clr-primary-blue: hsl(150, 100%, 66%);
+  --clr-primary-green: hsl(150, 100%, 66%);
 
   --clr-neutral-100: hsl(217, 19%, 38%);
   --clr-neutral-200: hsl(217, 19%, 24%);
@@ -78,4 +78,54 @@ h6 {
 
   --ff-base: "Manrope", sans-serif;
   --fw-extra-bold: 800;
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--clr-neutral-300);
+}
+
+.advice {
+  background-color: var(--clr-neutral-200);
+  margin: 5rem 1rem 0 1rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-extra-bold);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 20.4375rem;
+}
+
+.advice__title {
+  color: var(--clr-primary-green);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.875rem;
+}
+
+.advice__paragraph {
+  color: var(--clr-primary-cyan);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.advice__button {
+  background-color: var(--clr-primary-green);
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: -3.75rem;
+}
+
+.advice__image {
+  width: 1.5rem;
 }

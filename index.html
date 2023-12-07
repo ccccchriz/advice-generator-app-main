@@ -19,8 +19,13 @@
   <body>
     <main>
       <section class="advice">
-        <h2>Advice #<span id="advice__id"></span></h2>
-        <p>"<span id="advice__text" aria-live="polite"></span>"</p>
+        <h2 class="advice__title">Advice # <span id="advice__id">71</span></h2>
+        <p class="advice__paragraph">
+          "<span id="advice__text" aria-live="polite"
+            >It is easy to sit up and take notice, what's difficult is getting
+            up and taking action.</span
+          >"
+        </p>
         <picture>
           <source
             media="(min-width: 40rem)"
@@ -32,8 +37,12 @@
             alt=""
           />
         </picture>
-        <button>
-          <img src="assets/images/icon-dice.svg" alt="generate advice" />
+        <button class="advice__button">
+          <img
+            class="advice__image"
+            src="assets/images/icon-dice.svg"
+            alt="generate advice"
+          />
         </button>
       </section>
     </main>
