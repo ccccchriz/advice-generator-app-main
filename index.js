@@ -2,6 +2,8 @@ const generateAdivce = document.getElementById("adivce__new");
 const adviceId = document.getElementById("advice__id");
 const adviceText = document.getElementById("advice__text");
 
+const image = document.getElementsByClassName("advice__image")[0];
+
 let isFetching = false;
 
 async function fetchAdvice() {
@@ -11,6 +13,7 @@ async function fetchAdvice() {
 async function updateAdvice() {
   if (isFetching) return console.log("waiting");
   isFetching = true;
+  image.classList.add("advice__image--animate");
   let advice;
 
   while (advice == undefined || adviceId.textContent == advice.slip.id) {
@@ -23,6 +26,7 @@ async function updateAdvice() {
   adviceText.textContent = advice.slip.advice;
 
   isFetching = false;
+  image.classList.remove("advice__image--animate");
 }
 
 generateAdivce.addEventListener("click", updateAdvice);
