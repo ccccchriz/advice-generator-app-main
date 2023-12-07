@@ -151,8 +151,13 @@ main {
 }
 
 @media (min-width: 40rem) {
+  main {
+    align-items: center;
+  }
+
   .advice {
     gap: 2rem;
+    margin: 0;
   }
 
   .advice__paragraph {
