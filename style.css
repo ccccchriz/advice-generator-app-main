@@ -137,7 +137,7 @@ main {
 }
 
 .advice__image--animate {
-  animation: loading 2s infinite linear 1s;
+  animation: loading 2s infinite linear 0.3s;
 }
 
 @keyframes loading {
