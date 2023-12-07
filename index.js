@@ -7,7 +7,9 @@ const image = document.getElementsByClassName("advice__image")[0];
 let isFetching = false;
 
 async function fetchAdvice() {
-  return await fetch("https://api.adviceslip.com/advice");
+  return await fetch("https://api.adviceslip.com/advice", {
+    cache: "no-store",
+  });
 }
 
 async function updateAdvice() {
@@ -15,8 +17,11 @@ async function updateAdvice() {
   isFetching = true;
   image.classList.add("advice__image--animate");
   let advice;
+  let count = 0;
 
   while (advice == undefined || adviceId.textContent == advice.slip.id) {
+    count += 1;
+    if (count > 100) break;
     await fetchAdvice()
       .then((data) => data.json())
       .then((data) => (advice = data));
