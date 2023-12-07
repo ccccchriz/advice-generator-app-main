@@ -63,7 +63,7 @@ h6 {
 
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-ExtraBold.woff2") format("woff2");
+  src: url("assets/fonts/Manrope-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
@@ -102,7 +102,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  max-width: 20.4375rem;
+  max-width: 32rem;
 }
 
 .advice__title {
@@ -128,4 +128,14 @@ main {
 
 .advice__image {
   width: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  .advice {
+    gap: 2rem;
+  }
+
+  .advice__paragraph {
+    font-size: 1.75rem;
+  }
 }
